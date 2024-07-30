@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @if (true)
+    {
+        
+    }
+    @* @if(ViewBag.DuLieuNguoiDung != null)
+    {
+        <h1 class="display-4">Welcome @ViewBag.DuLieuNguoiDung</h1>
+    } *@
+    else
+    {
+        <h1 class="display-4">Welcome</h1>
+    }
+    <h1 class="display-4" id="datauser">Welcome</h1>
+    <script>
+        function LoadDataFromLocal() {
+            var data = localStorage.getItem("usernameData");
+            return data;
+        }
+        document.getElementById("datauser").innerHTML = LoadDataFromLocal();
+    </script>
+    
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
